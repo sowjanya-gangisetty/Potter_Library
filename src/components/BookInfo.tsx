@@ -38,12 +38,9 @@ const BookInfo = ({ book }: BookInfoProps) =>{
         <div>
           <h2 className="text-xl font-bold text-gray-900 ">{title}</h2>
         </div>
-
         {summary && (
           <p className="text-m text-gray-600 leading-relaxed">{summary}</p>
-          
         )}
-
         {dedication && (
           <blockquote className="border-l-4 border-indigo-200 pl-3">
             <p className="text-s text-gray-800 italic">{dedication}</p>

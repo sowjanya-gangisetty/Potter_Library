@@ -10,8 +10,8 @@ const fetchBooks = async (): Promise<Book[]> => {
   if (stored) {
     return JSON.parse(stored) as Book[];
   }
-  const res = await fetch(API_URL);
-  const json = await res.json();
+  const response = await fetch(API_URL);
+  const json = await response.json();
   const books: Book[] = json.data ?? [];
   localStorage.setItem(STORAGE_KEY, JSON.stringify(books));
   return books;
