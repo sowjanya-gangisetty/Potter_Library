@@ -18,20 +18,15 @@ const BookInfo = ({ book }: BookInfoProps) =>{
 
   return (
     <div className="flex flex-col sm:flex-row bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100">
-     
-      <div className="sm:w-48 w-full flex-shrink-0 bg-gray-100">
-        {cover ? (
+      <div className="sm:w-48 w-full shrink-0 bg-gray-100">
+        {cover &&
           <img
             src={cover}
             alt={`Cover of ${title}`}
             loading="lazy"
             className="w-full h-64 sm:h-full object-cover"
           />
-        ) : (
-          <div className="w-full h-64 sm:h-full flex items-center justify-center text-gray-300 text-5xl">
-            
-          </div>
-        )}
+        }
       </div>
 
       <div className="flex flex-col gap-3 p-6 flex-1">
@@ -46,7 +41,6 @@ const BookInfo = ({ book }: BookInfoProps) =>{
             <p className="text-s text-gray-800 italic">{dedication}</p>
           </blockquote>
         )}
-
         <div className="flex flex-wrap gap-4 mt-auto pt-3 border-t border-gray-100 text-s text-gray-500">
           {pages && (
             <span>
