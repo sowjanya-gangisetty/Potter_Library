@@ -5,7 +5,7 @@ type BookInfoProps = {
 };
 
 const BookInfo = ({ book }: BookInfoProps) =>{ 
-  const { title, author, cover, dedication, pages, release_date, summary} =
+  const { title, cover, dedication, pages, release_date, summary} =
     book.attributes;
 
   const formattedDate = release_date
